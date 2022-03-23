@@ -7,10 +7,10 @@ async function bootstrap() {
   app.enableCors();
 
   const config = new DocumentBuilder()
-    .setTitle('Bottify API')
-    .setDescription('Awesome api nestjs')
+    .setTitle('BOT-PANEL API')
+    .setDescription('API для телеграм ботов')
     .setVersion('1.0')
-    .addTag('telegram')
+    .addTag('Main')
     .build();
   
   const document = SwaggerModule.createDocument(app, config)
