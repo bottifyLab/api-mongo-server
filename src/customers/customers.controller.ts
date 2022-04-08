@@ -6,7 +6,7 @@ import { Customer } from './schemas/customer.schema';
 import {
 	ApiBearerAuth,
 	ApiOperation,
-	ApiResponse,
+	ApiResponse, ApiOkResponse,
 	ApiTags
 } from '@nestjs/swagger';
 
@@ -17,6 +17,7 @@ export class CustomersController {
     constructor(private readonly customersService: CustomersService) {}
     
     @Get()
+    @ApiOkResponse({ description: 'Succes customers collection'})
     @ApiOperation({ summary: 'Получить список всех пользователей'})
     getAll() {
         return this.customersService.getAll()

@@ -10,11 +10,12 @@ async function bootstrap() {
     .setTitle('BOT-PANEL API')
     .setDescription('API для телеграм ботов')
     .setVersion('1.0')
-    .addTag('Main')
+    .addTag('MAIN')
+    .addBearerAuth()
     .build();
   
   const document = SwaggerModule.createDocument(app, config)
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('/docs', app, document);
 
   await app.listen(5000);
 }

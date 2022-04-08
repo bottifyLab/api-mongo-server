@@ -3,6 +3,14 @@ import { CreateOfferDto } from './dto/create-offer.dto'
 import { UpdateOfferDto } from './dto/update-offer.dto'
 import { OffersService } from './offers.service';
 import { Offer } from './schemas/offer.schema';
+import {
+        ApiBearerAuth,
+        ApiOperation,
+        ApiResponse,
+        ApiTags
+} from '@nestjs/swagger';
+
+@ApiTags('offers')
 
 @Controller('offers')
 export class OffersController {
