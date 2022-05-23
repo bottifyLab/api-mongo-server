@@ -10,7 +10,7 @@ import { UsersModule } from './users/users.module';
   imports: [
       CustomersModule,
       OffersModule, 
-      MongooseModule.forRoot(`mongodb+srv://ben:ben@cluster0.zeumy.mongodb.net/maindb?retryWrites=true&w=majority`), AuthModule, UsersModule
+      MongooseModule.forRoot(`mongodb+srv://ben:ben@cluster0.zeumy.mongodb.net/testdb?retryWrites=true&w=majority`), AuthModule, UsersModule
   ],
   controllers: [AppController],
   providers: [],
